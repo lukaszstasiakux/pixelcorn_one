@@ -5,7 +5,7 @@
 <main>
     <div id="content">
     <div class="category__header">
-      <?php Kategoria: echo single_cat_title("", false) ?>
+    Kategoria: <?php echo single_cat_title("", false) ?>
     </div>
 
        <?php $current_category = single_cat_title("", false); ?>

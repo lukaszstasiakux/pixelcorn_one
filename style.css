@@ -4,7 +4,7 @@ Theme URI: http://code.pixelcorn.pl/wp_theme_pixelcorn_one
 Author: Łukasz Stasiak
 Author URI: http://lensflare.pl
 Description: PixelCorn One - theme for my website, free to download and use.
-Version: 1.0
+Version: 1.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: pixelcorn
@@ -14,9 +14,9 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 /*
 kolory
-tekst podstawowy: #4C4C4C
+tekst podstawowy: #4C4C4C -> 212121
 jasno szary: #B8B9BA
-kolor akcji:#CC7C18
+kolor akcji:#CC7C18 
 akcja hover: #FC991E
 header background: #f7f7f7
 
@@ -33,14 +33,16 @@ html{
 }
 body{
   font-size: 1.6rem;
-  color: #4C4C4C;
+  color: #212121;
 }
 h1{
   font-size: 3.6rem;
 }
 h2{
   font-size: 3.2rem;
-  margin: 1rem 0 2rem 0;
+  margin: 0.5rem 0 2rem 0;
+  color: #CC7C18;
+  font-weight: normal;
 }
 p{
   font-size: 1.6rem;
@@ -59,23 +61,24 @@ a{
   border:none;
 }
 a:hover{
-  color:#4C4C4C;
+  color:#212121;
   transition:200ms ease-out;
 }
 a.styled-link{
   padding: 1rem 2rem;
-  border: 1px solid #CC7C18
+  border: 1px solid #000000;
+  color:#000000;
 }
 a.styled-link:hover{
   color:#ffffff;
-  background-color:#CC7C18;
+  background-color:#000000;
 }
 .menu__header li a{
   display: inline-block;
   font-size:1.6rem;
 }
 #sidebar a{
-  font-size:1.4rem;
+  color:#212121;
 }
 
 body{
@@ -85,7 +88,6 @@ body{
 }
 header{
   width:100%;
-  background-color:#f7f7f7;
   display: flex;
   flex-direction: column;
 }
@@ -93,7 +95,6 @@ footer{
   width:100%;
   background-color:#f7f7f7;
   display: flex;
-  border-top:1px solid #B8B9BA;
   flex-direction: column;
 }
 
@@ -126,7 +127,6 @@ footer{
   text-align:center;
   margin: 0 auto;
   padding:2rem 0;
-  border-bottom:1px solid #B8B9BA;
 }
 .menu__header li{
   display: inline-block;
@@ -170,9 +170,15 @@ main{
 }
 main #content{
   width: calc(100% - 29rem);
+  padding: 0rem 1rem;
 }
 main #content.post_content{
   padding-top:3rem;
+}
+.post_content img{
+  display: inline-block;
+  height:auto;
+  width:100%;
 }
 main #sidebar {
   width: 26rem;
@@ -185,11 +191,11 @@ main #sidebar {
 .category__header{
   width: 100%;
   display: inline-block;
-  font-size: 2rem;
+  font-size: 3.2rem;
   text-align: center;
-  color:#CC7C18;
-  margin:2rem 0 3rem 0;
-  font-weight: bold;
+  color:#000000;
+  margin:2rem 0 0 0;
+  font-weight: normal;
 
 }
 /**  post  **/
@@ -199,14 +205,14 @@ article{
   margin:3rem auto 4rem auto ;
 }
 .meta__post{
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   text-align: center;
   width:100%;
   color:#B8B9BA;
-  font-style: italic;
 
 }
 .meta__post a{
+  font-size: 1.2rem;
   color:#B8B9BA;
   text-decoration: none;
 }
@@ -219,7 +225,7 @@ article{
   padding:0;
   margin:0;
   display: inline-block;
-  color: #4C4C4C;
+  color: #212121;
   text-decoration: none;
 }
 
@@ -232,6 +238,10 @@ article{
   width:100%;
   
 }
+.wp-block-image{
+  margin:0 auto 2rem auto!important;
+
+}
 .image_post a {
   display: inline-block;
   width:100%;
@@ -241,9 +251,10 @@ article{
   display: inline-block;
   width:100%;
 }
+
 .short__post{
   width:100%;
-  margin: 0rem 0rem 3rem 0rem;
+  margin: 0rem 0rem 2rem 0rem;
   box-sizing: border-box;
   line-height:2rem;
   text-overflow: ellipsis;
@@ -308,22 +319,28 @@ article{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 .widget__about_me--image-wrapper{
   width:10rem;
   height:10rem;
   border-radius:50%;
   overflow: hidden;
+  position: absolute;
+  top:0;
 }
 .widget__about_me--image{
   display: inline-block;
   width:100%;
 }
 .widget__about_me--text-wrapper{
-  padding: 1rem 0rem;
+  padding:6rem 2rem 2rem 2rem;
+  margin-top: 5rem;
+  background-color:#f7f7f7;
+  border-radius: 1rem;
 }
 .widget__about_me--text{
-  font-size:14px;
+  font-size:1.4rem;
   text-align: justify;
 }
 .widget__about_me--social-wrapper{
@@ -333,6 +350,9 @@ article{
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  background-color:#f7f7f7;
+  padding-top:2rem;
+  
 }
 .widget__about_me--social-link{
   max-width:20px;
@@ -340,7 +360,7 @@ article{
   margin: 0rem 0.5rem;
   padding: 5px;
   border-radius: 50%;
-  border: 1px solid #4c4c4c;
+  border: 1px solid #212121;
 }
 .widget__about_me--social-icon{
   display: block;
@@ -354,7 +374,9 @@ article{
   align-items: center;
   font-size:1.4rem;
   width:100%;
-  margin-bottom:6rem;
+  border-bottom: 1px solid #CC7C18;
+  padding-bottom: 3rem;
+  margin-bottom:3rem;
   text-align:center;
 }
 .widget_title{
@@ -364,7 +386,7 @@ article{
   font-size:1.8rem;
   width:100%;
   font-weight:bold;
-  color:#4C4C4C;
+  color:#CC7C18;
 }
 .widget_content ul{
   padding:0;

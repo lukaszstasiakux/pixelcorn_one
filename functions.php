@@ -174,11 +174,15 @@ class About_author extends WP_Widget {
 						<div class="widget__about_me--text">
 						' . $text . '
 						</div>
-					</div>
+					
 					<div class="widget__about_me--social-wrapper">';
 			if ( $facebook ) {
 				echo 	'<a href="' . $facebook . '" target="_blank" class="widget__about_me--social-link">
 								<img class="widget__about_me--social-icon" src="'. site_url(). '/wp-content/themes/'.get_template().'/assets/icons/facebook.svg"/></a>';
+			}
+			if ( $linkedin ) {
+				echo 	'<a href="' . $linkedin . '" target="_blank" class="widget__about_me--social-link">
+								<img class="widget__about_me--social-icon" src="'. site_url(). '/wp-content/themes/'.get_template().'/assets/icons/linkedin.svg"/></a>';
 			}
 			if ( $instagram ) {
 				echo 	'<a href="' . $instagram . '" target="_blank" class="widget__about_me--social-link">
@@ -188,10 +192,7 @@ class About_author extends WP_Widget {
 				echo 	'<a href="' . $Ppx . '" target="_blank" class="widget__about_me--social-link">
 								<img class="widget__about_me--social-icon" src="'. site_url(). '/wp-content/themes/'.get_template().'/assets/icons/500px.svg"/></a>';
 			}
-			if ( $linkedin ) {
-				echo 	'<a href="' . $linkedin . '" target="_blank" class="widget__about_me--social-link">
-								<img class="widget__about_me--social-icon" src="'. site_url(). '/wp-content/themes/'.get_template().'/assets/icons/linkedin.svg"/></a>';
-			}
+			
 			if ( $behance ) {
 				echo 	'<a href="' . $facebook . '" target="_blank" class="widget__about_me--social-link">
 								<img class="widget__about_me--social-icon" src="'. site_url(). '/wp-content/themes/'.get_template().'/assets/icons/behance.svg"/></a>';
@@ -201,7 +202,7 @@ class About_author extends WP_Widget {
 								<img class="widget__about_me--social-icon" src="'. site_url(). '/wp-content/themes/'.get_template().'/assets/icons/youtube.svg"/></a>';
 			}
 
-		echo'			</div>
+		echo'			</div></div>
 				</div>' ;
     
 	echo $after_widget;
